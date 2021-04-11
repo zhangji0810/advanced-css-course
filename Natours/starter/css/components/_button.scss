@@ -1,0 +1,58 @@
+.btn {
+  &:link, /* 链接状态 */
+    &:visited {
+    /* 按钮访问过后 */
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    display: inline-block;
+    transition: transform 0.2s;
+    position: relative;
+    font-size: 1.6rem;
+  }
+
+  &:hover {
+    /* 鼠标移到按钮上方时 */
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6); /* 改变按钮尺寸 */
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    /* 按钮按下时 */
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &::after {
+    content: ""; /* 用::before 或者 ::after 时必须定义content */
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards; /* 让动画在其他动作完成后再触发 */
+  }
+}
