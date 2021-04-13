@@ -1,8 +1,6 @@
 .row {
   max-width: $grid-width;
-  background-color: #eee;
   margin: 0 auto;
-  color: $color-white;
 
   &:not(:last-child) {
     //选定除了最后一个child以外的所有其他children
@@ -12,7 +10,6 @@
   @include clearfix;
 
   [class^="col-"] {
-    background-color: orangered;
     float: left;
 
     &:not(:last-child) {
