@@ -38,6 +38,15 @@
     }
   }
 
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
   &::after {
     content: ""; /* 用::before 或者 ::after 时必须定义content */
     display: inline-block;

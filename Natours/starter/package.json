@@ -184,7 +184,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "compiler:sass": "node-sass sass/main.scss css/style.css -w"
+    "compiler:sass": "node-sass css/style.scss css/style.css -w"
   },
   "author": "Ji Zhang",
   "license": "ISC"
